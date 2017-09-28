@@ -1,0 +1,130 @@
+#about-us {
+   .wrapper;
+}
+
+.intro {
+   .center-text;
+   padding-top: 90px;
+   padding-bottom: 40px;
+   @media @tablet {
+      padding-bottom: 70px;
+   }
+   @media @desktop {
+      padding-bottom: 100px;
+   }
+   h3 {
+      font-size: 30px;
+      margin-top: 3px;
+   }
+   p {
+      margin: 32px 20px 0px 20px;
+   }
+}
+
+.separator {
+   width: 60px;
+   height: 3px;
+   .center-text;
+   display: inline-block;
+   margin-top: 28px;
+   background-color: @brand-red;
+}
+
+.about-us-gallery {
+   .block;
+   margin-bottom: 0px;
+   @media @desktop {
+      margin-bottom: -70px;
+   }
+   @media @large-desktop {
+      margin-bottom: 0px;
+   }
+}
+
+.about-us-item {
+   .block;
+   width: 90%;
+   height: 100%;
+   background-color: @brand-green;
+   margin: 20px auto 0 auto;
+   .relative;
+   z-index: 1;
+   transition: all 2s ease-in-out;
+   @media @tablet {
+      width: 80%;
+   }
+   @media @desktop {
+      width: 30.3%;
+      margin-right: 15px;
+      margin-left: 15px;
+      float: left;
+   }
+   @media @large-desktop {
+      margin-left: 0;
+      margin-right: 25px;
+      width: 380px;
+   }
+}
+
+.about-us-item:hover .about-us-cover > img {
+   opacity: 0.2;
+   transition: all 0.3s ease-in-out;
+}
+
+.about-us-item:hover .about-us-cover {
+   left: -10px;
+   bottom: 10px;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+}
+
+.about-us-item:hover .about-us-desc {
+   opacity: 1;
+   top: 50%;
+   transition: all 0.5s ease-in-out;
+}
+
+.about-us-cover {
+   left: 0px;
+   bottom: 0px;
+   .relative;
+   background: -webkit-linear-gradient(@brand-red, @brand-yellow);
+   background: -o-linear-gradient(@brand-red, @brand-yellow);
+   background: -moz-linear-gradient(@brand-red, @brand-yellow);
+   background: linear-gradient(@brand-red, @brand-yellow);
+   transition: all 0.3s ease-in-out;
+   img {
+      width: 100%;
+      height: auto;
+      transition: all 0.3s ease-in-out;
+   }
+}
+
+.about-us-desc {
+   .absolute;
+   top: 120%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   opacity: 0;
+   transition: all 0.3s ease-in-out;
+   img {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 10px;
+   }
+   h4 {
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      .center-text;
+      margin-bottom: 0;
+   }
+}
+
+.about-us-gallery .about-us-item:last-child {
+   @media @large-desktop {
+   margin-right: 0px;
+   }
+}

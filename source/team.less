@@ -1,0 +1,162 @@
+#team {
+   .wrapper;
+   padding-bottom: 80px;
+   @media @tablet {
+      padding-bottom: 180px;
+   }
+}
+
+.team-gallery {
+   .block;
+   margin: 0 auto;
+   width: 100%;
+   .center-text;
+   display: inline-flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.team-gallery-item {
+   margin: 0 auto;
+   margin-bottom: 100px;
+   .relative;
+   background-color: @brand-green;
+   height: auto;
+   width: 90%;
+   z-index: 1;
+   @media @tablet {
+      width: 30.9%;
+      margin-bottom: 0px;
+   }
+   figcaption {
+      .relative;
+      top: 70px;
+      margin-top: -40px;
+      h4 {
+         margin-top: 0px;
+      }
+      span {
+         font-size: 15px;
+         font-family: @font-family-tertiary;
+         color: rgb(153, 153, 153);
+         font-style: italic;
+         line-height: 1.6;
+      }
+   }
+}
+
+.team-gallery-item:hover .team-gallery-hover > img {
+   opacity: 0.2;
+   transition: all 0.3s ease-in-out;
+}
+
+.team-gallery-item:hover .team-gallery-hover {
+   left: -10px;
+   bottom: 10px;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+}
+
+.team-gallery-item:hover .team-gallery-social {
+   opacity: 1;
+   top: 50%;
+}
+
+.team-gallery-hover {
+   .relative;
+   left: 0;
+   bottom: 0;
+   margin: 0 auto;
+   height: auto;
+   background: linear-gradient(@brand-red, @brand-yellow);
+   transition: all 0.3s ease-in-out;
+   img {
+      .relative;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+   }
+}
+
+.team-gallery-social {
+   .absolute;
+   width: 148px;
+   top: 0px;
+   left: 50%;
+   transform: translate(-50%, 0%);
+   opacity: 0;
+   transition: all 0.5s ease-in-out;
+   @media @tablet {
+      width: 168px;
+   }
+   @media @desktop {
+      width: 228px;
+   }
+   li {
+      float: left;
+      .center-text;
+   }
+   i {
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+      line-height: 35px;
+      color: @brand-red;
+      background-color: @brand-yellow;
+      margin-right: 1px;
+      cursor: pointer;
+      &:hover {
+         background-color: @brand-red;
+         color: #FFF;
+         transition: all 0.5s ease-in-out;
+      }
+      @media @tablet {
+         width: 40px;
+         height: 40px;
+         font-size: 20px;
+         line-height: 40px;
+      }
+      @media @desktop {
+         width: 55px;
+         height: 55px;
+         font-size: 25px;
+         line-height: 55px;
+      }
+   }
+}
+
+// CUSTOMERS
+#customers {
+   .clear;
+   background-color: @alt-bg;
+   min-height: 250px;
+   width: 100%;
+   display: inline-flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   ul {
+      .wrapper;
+      width: 100%;
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: space-around;
+      @media @desktop {
+         justify-content: space-between;
+      }
+   }
+   li {
+      margin: auto;
+      padding: 40px;
+      @media @tablet {
+         padding: 60px;
+      }
+      @media @desktop {
+         padding: 0px;
+      }
+   }
+}
